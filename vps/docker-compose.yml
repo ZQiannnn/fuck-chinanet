@@ -17,4 +17,4 @@ services:
     network_mode: host
     volumes:
       - ./frps.ini:/frp/frps.ini:ro
-    command: ["frps", "-c", "/frp/frps.ini"]
+    command: ["./frps", "-c", "/frp/frps.ini"]
