@@ -1,4 +1,4 @@
 bindPort = 7000
 auth.method = "token"
 auth.token = "h93NSjR-Fi%jdy7s_82x"
-allowPorts = [18080, 18081, 18082]
+allowPorts = "18080-18100"
