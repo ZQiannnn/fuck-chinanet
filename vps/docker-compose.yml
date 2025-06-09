@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   naiveproxy:
-    image: quay.io/usernaivete/naiveproxy
+    image: ghcr.io/klzgrad/naiveproxy:latest
     container_name: naiveproxy
     restart: always
     ports:
