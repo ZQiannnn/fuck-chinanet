@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  naiveproxy:
+    image: quay.io/usernaivete/naiveproxy
+    container_name: naiveproxy
+    restart: always
+    ports:
+      - "443:443"
+    volumes:
+      - ./naive-config.json:/config.json:ro
+
+  frps:
+    image: snowdreamtech/frps
+    container_name: frps
+    restart: always
+    ports:
+      - "7000:7000"
+      - "18080:18080"  # 转发到家庭 nginx
+    volumes:
+      - ./frps.ini:/frp/frps.ini:ro
+    command: ["frps", "-c", "/frp/frps.ini"]
+
+  caddy:
+    image: caddy:alpine
+    container_name: caddy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile

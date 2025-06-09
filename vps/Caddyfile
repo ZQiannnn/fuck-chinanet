@@ -1,0 +1,7 @@
+plex-v.zqian.nyc.mn {
+  reverse_proxy 127.0.0.1:18080
+}
+
+home-v.zqian.nyc.mn {
+  reverse_proxy 127.0.0.1:18080
+}

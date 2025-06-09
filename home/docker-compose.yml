@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+
+  naiveproxy-client:
+    image: quay.io/usernaivete/naiveproxy
+    container_name: naiveproxy-client
+    restart: always
+    network_mode: host
+    volumes:
+      - ./naive-config.json:/config.json:ro
+
+  frpc:
+    image: snowdreamtech/frpc
+    container_name: frpc
+    restart: always
+    network_mode: host
+    volumes:
+      - ./frpc.ini:/frp/frpc.ini:ro
+    command: ["frpc", "-c", "/frp/frpc.ini"]
