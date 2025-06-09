@@ -1,6 +1,0 @@
-{
-    "listen": "0.0.0.0:443",
-    "proxy": "https://btuser:btpass@127.0.0.1:7000",
-    "host": "cloud.189.cn",
-    "padding": true
-  }

@@ -1,30 +1,20 @@
-version: '3.8'
 services:
-  naiveproxy:
-    image: ghcr.io/klzgrad/naiveproxy:latest
-    container_name: naiveproxy
+  caddy:
+    image: pocat/naiveproxy
+    container_name: naiveproxy-server
     restart: always
-    ports:
-      - "443:443"
+    network_mode: host
+    environment:
+      - CADDYFILE=/etc/naiveproxy/Caddyfile
     volumes:
-      - ./naive-config.json:/config.json:ro
+      - ./Caddyfile:/etc/naiveproxy/Caddyfile:ro
+      - ./log/caddy:/var/log/caddy
 
   frps:
     image: snowdreamtech/frps
     container_name: frps
     restart: always
-    ports:
-      - "7000:7000"
-      - "18080:18080"  # 转发到家庭 nginx
+    network_mode: host
     volumes:
       - ./frps.ini:/frp/frps.ini:ro
     command: ["frps", "-c", "/frp/frps.ini"]
-
-  caddy:
-    image: caddy:alpine
-    container_name: caddy
-    restart: always
-    ports:
-      - "80:80"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
