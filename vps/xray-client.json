@@ -1,0 +1,90 @@
+{
+  "inbounds": [
+    {
+      "port": 1080,
+      "protocol": "socks",
+      "tag": "qbit-in",
+      "settings": { "udp": false }
+    },
+    {
+      "port": 1081,
+      "protocol": "socks",
+      "tag": "nginx-in",
+      "settings": { "udp": false }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "to-qbit-reality",
+      "settings": {
+        "vnext": [
+          {
+            "address": "127.0.0.1",
+            "port": 2080,
+            "users": [
+              {
+                "id": "323acea3-ebdd-4714-9036-cc28cbfacdfd",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "serverName": "upload.cloud.189.cn",
+          "publicKey": "aGQ5k0F-JASJiRPQIK0uPnAbTqHOwf3uHS6n1vLPtS0",
+          "shortId": "2d6b71d3bccf3528"
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "to-nginx-reality",
+      "settings": {
+        "vnext": [
+          {
+            "address": "127.0.0.1",
+            "port": 2081,
+            "users": [
+              {
+                "id": "323acea3-ebdd-4714-9036-cc28cbfacdfd",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "serverName": "upload.cloud.189.cn",
+          "publicKey": "aGQ5k0F-JASJiRPQIK0uPnAbTqHOwf3uHS6n1vLPtS0",
+          "shortId": "2d6b71d3bccf3528"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": ["qbit-in"],
+        "outboundTag": "to-qbit-reality"
+      },
+      {
+        "type": "field",
+        "inboundTag": ["nginx-in"],
+        "outboundTag": "to-nginx-reality"
+      }
+    ]
+  }
+}
