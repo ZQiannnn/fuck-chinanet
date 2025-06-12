@@ -1,36 +1,6 @@
 {
   "inbounds": [
     {
-      "port": 2080,
-      "protocol": "vless",
-      "tag": "qbit-reality-in",
-      "settings": {
-        "clients": [
-          {
-            "id": "323acea3-ebdd-4714-9036-cc28cbfacdfd",
-            "flow": "xtls-rprx-vision"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "raw",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "target": "media-gxnn-fy-person01.gx10oss.ctyunxs.cn:443",
-          "xver": 0,
-          "serverNames": [
-            "media-gxnn-fy-person01.gx10oss.ctyunxs.cn"
-          ],
-          "privateKey": "mNjVQ2Ex6ZVeGtY_y1dSqavHeNRPRKdipwbQjppegnk",
-          "shortIds": [
-            "2d6b71d3bccf3528"
-          ]
-        }
-      }
-    },
-    {
       "port": 2081,
       "protocol": "vless",
       "tag": "nginx-reality-in",
@@ -63,15 +33,6 @@
   ],
   "outbounds": [
     {
-      "protocol": "socks",
-      "tag": "to-frps-qbit",
-      "settings": {
-        "servers": [
-          { "address": "127.0.0.1", "port": 3080 }
-        ]
-      }
-    },
-    {
       "protocol": "freedom",
       "tag": "to-frps-nginx",
       "settings": {
@@ -82,11 +43,6 @@
   ],
   "routing": {
     "rules": [
-      {
-        "type": "field",
-        "inboundTag": ["qbit-reality-in"],
-        "outboundTag": "to-frps-qbit"
-      },
       {
         "type": "field",
         "inboundTag": ["nginx-reality-in"],
