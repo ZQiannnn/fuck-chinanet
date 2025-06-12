@@ -72,12 +72,12 @@
       }
     },
     {
-      "protocol": "socks",
+      "protocol": "dokodemo-door",
       "tag": "to-frps-nginx",
       "settings": {
-        "servers": [
-          { "address": "127.0.0.1", "port": 3081 }
-        ]
+        "address": "127.0.0.1",
+        "port": 3081,
+        "network": "tcp"
       }
     }
   ],
