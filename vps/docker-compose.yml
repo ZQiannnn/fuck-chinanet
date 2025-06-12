@@ -7,18 +7,11 @@ services:
     network_mode: host
     volumes:
       - ./frps.toml:/etc/frp/frps.toml:ro
+
   xray-client:
     image: teddysun/xray
     container_name: xray-client
     volumes:
       - ./xray-client.json:/etc/xray/config.json
-    network_mode: "host"
-    restart: always
-
-  xray-server:
-    image: teddysun/xray
-    container_name: xray-server
-    volumes:
-      - ./xray-server.json:/etc/xray/config.json
     network_mode: "host"
     restart: always

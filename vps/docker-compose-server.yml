@@ -1,0 +1,8 @@
+services:
+xray-server:
+  image: teddysun/xray
+  container_name: xray-server
+  volumes:
+    - ./xray-server.json:/etc/xray/config.json
+  network_mode: "host"
+  restart: always
