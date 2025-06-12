@@ -72,12 +72,11 @@
       }
     },
     {
-      "protocol": "dokodemo-door",
+      "protocol": "freedom",
       "tag": "to-frps-nginx",
       "settings": {
-        "address": "127.0.0.1",
-        "port": 3081,
-        "network": "tcp"
+        "redirect": "127.0.0.1:3081",
+        "domainStrategy": "AsIs"
       }
     }
   ],
