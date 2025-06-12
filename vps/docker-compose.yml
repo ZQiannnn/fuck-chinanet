@@ -1,14 +1,4 @@
 services:
-  caddy:
-    image: pocat/naiveproxy
-    container_name: naiveproxy-server
-    restart: always
-    network_mode: host
-    environment:
-      - CADDYFILE=/etc/naiveproxy/Caddyfile
-    volumes:
-      - ./Caddyfile:/etc/naiveproxy/Caddyfile:ro
-      - ./log/caddy:/var/log/caddy
 
   frps:
     image: snowdreamtech/frps
