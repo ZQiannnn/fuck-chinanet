@@ -18,10 +18,10 @@
         "security": "reality",
         "realitySettings": {
           "show": true,
-          "dest": "cn-beijing-data.aliyundrive.net:443",
+          "dest": "api.aliyundrive.com:443",
           "xver": 0,
           "serverNames": [
-            "cn-beijing-data.aliyundrive.net"
+            "api.aliyundrive.com"
           ],
           "privateKey": "mNjVQ2Ex6ZVeGtY_y1dSqavHeNRPRKdipwbQjppegnk",
           "shortIds": [

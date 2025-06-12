@@ -32,7 +32,7 @@
         "realitySettings": {
           "show": true,
           "fingerprint": "chrome",
-          "serverName": "cn-beijing-data.aliyundrive.net",
+          "serverName": "api.aliyundrive.com",
           "publicKey": "aGQ5k0F-JASJiRPQIK0uPnAbTqHOwf3uHS6n1vLPtS0",
           "shortId": "2d6b71d3bccf3528"
         }
