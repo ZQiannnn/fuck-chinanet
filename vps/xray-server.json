@@ -18,10 +18,10 @@
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "media-gxnn-fy-person01.gx10oss.ctyunxs.cn:443",
+          "dest": "cn-beijing-data.aliyundrive.net:443",
           "xver": 0,
           "serverNames": [
-            "media-gxnn-fy-person01.gx10oss.ctyunxs.cn"
+            "cn-beijing-data.aliyundrive.net"
           ],
           "privateKey": "mNjVQ2Ex6ZVeGtY_y1dSqavHeNRPRKdipwbQjppegnk",
           "shortIds": [
