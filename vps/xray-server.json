@@ -17,7 +17,7 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "show": false,
+          "show": true,
           "dest": "upload.cloud.189.cn:443",
           "xver": 0,
           "serverNames": [

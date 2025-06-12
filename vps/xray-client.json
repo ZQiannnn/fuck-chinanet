@@ -30,7 +30,7 @@
         "network": "raw",
         "security": "reality",
         "realitySettings": {
-          "show": false,
+          "show": true,
           "fingerprint": "chrome",
           "serverName": "upload.cloud.189.cn",
           "publicKey": "aGQ5k0F-JASJiRPQIK0uPnAbTqHOwf3uHS6n1vLPtS0",
