@@ -67,7 +67,7 @@
       "tag": "to-frps-qbit",
       "settings": {
         "servers": [
-          { "address": "127.0.0.1", "port": 7000 }
+          { "address": "127.0.0.1", "port": 3080 }
         ]
       }
     },
@@ -76,7 +76,7 @@
       "tag": "to-frps-nginx",
       "settings": {
         "servers": [
-          { "address": "127.0.0.1", "port": 8999 }
+          { "address": "127.0.0.1", "port": 3081 }
         ]
       }
     }
