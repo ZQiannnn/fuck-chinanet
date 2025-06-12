@@ -18,10 +18,10 @@
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "target": "upload.cloud.189.cn:443",
+          "target": "media-gxnn-fy-person01.gx10oss.ctyunxs.cn:443",
           "xver": 0,
           "serverNames": [
-            "upload.cloud.189.cn"
+            "media-gxnn-fy-person01.gx10oss.ctyunxs.cn"
           ],
           "privateKey": "mNjVQ2Ex6ZVeGtY_y1dSqavHeNRPRKdipwbQjppegnk",
           "shortIds": [
@@ -48,10 +48,10 @@
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "upload.cloud.189.cn:443",
+          "dest": "media-gxnn-fy-person01.gx10oss.ctyunxs.cn:443",
           "xver": 0,
           "serverNames": [
-            "upload.cloud.189.cn"
+            "media-gxnn-fy-person01.gx10oss.ctyunxs.cn"
           ],
           "privateKey": "mNjVQ2Ex6ZVeGtY_y1dSqavHeNRPRKdipwbQjppegnk",
           "shortIds": [
@@ -75,7 +75,7 @@
       "protocol": "freedom",
       "tag": "to-frps-nginx",
       "settings": {
-        "redirect": "127.0.0.1:3081",
+        "redirect": "192.168.10.8:8999",
         "domainStrategy": "AsIs"
       }
     }
